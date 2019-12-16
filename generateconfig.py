@@ -25,7 +25,7 @@ def generate_config():
         sys.exit()
 
     #pub_ip = json.load(urlopen('http://httpbin.org/ip'))['origin']
-    pub_ip = '192.168.80.193' #Manually setting the IP as the above urlopen will not work in a segregated security enclave - failing the whole script.
+    pub_ip = '172.16.0.17' #Manually setting the IP as the above urlopen will not work in a segregated security enclave - failing the whole script.
     default_base_url = 'http://{}'.format(pub_ip)
     default_honeymap_url = '{}:3000'.format(default_base_url)
     default_redis_url = 'redis://localhost:6379'
